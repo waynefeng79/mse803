@@ -1,0 +1,58 @@
+{
+  "source_file": "Sample_dataset.csv",
+  "cleaning_summary": {
+    "input_rows": 10,
+    "cleaned_rows": 9,
+    "duplicate_rows_merged": 1
+  },
+  "method": "Available-case analysis using sample variance, sample standard deviation, and sample covariance (n - 1 denominator).",
+  "descriptive_statistics": {
+    "Age": {
+      "count": 8,
+      "missing_count": 1,
+      "mean": 30.75,
+      "sample_variance": 40.5,
+      "sample_standard_deviation": 6.363961030678928
+    },
+    "Net worth": {
+      "count": 7,
+      "missing_count": 2,
+      "mean": 38571.42857142857,
+      "sample_variance": 200619047.6190476,
+      "sample_standard_deviation": 14164.005352266979
+    },
+    "Salary": {
+      "count": 8,
+      "missing_count": 1,
+      "mean": 62625.0,
+      "sample_variance": 31982142.85714286,
+      "sample_standard_deviation": 5655.275665884277
+    }
+  },
+  "covariances": [
+    {
+      "variables": [
+        "Age",
+        "Net worth"
+      ],
+      "pair_count": 7,
+      "sample_covariance": 41857.142857142855
+    },
+    {
+      "variables": [
+        "Age",
+        "Salary"
+      ],
+      "pair_count": 8,
+      "sample_covariance": 22607.14285714286
+    },
+    {
+      "variables": [
+        "Net worth",
+        "Salary"
+      ],
+      "pair_count": 7,
+      "sample_covariance": 12261904.761904761
+    }
+  ]
+}
