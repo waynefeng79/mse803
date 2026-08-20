@@ -1,0 +1,264 @@
+{
+  "source_file": "Sample_dataset.csv",
+  "cleaning_summary": {
+    "input_rows": 10,
+    "cleaned_rows": 9,
+    "duplicate_rows_merged": 1
+  },
+  "retrieved_without_regression": [
+    {
+      "name": "Eve",
+      "field": "ID",
+      "value": 6,
+      "method": "inferred from consecutive IDs on the neighbouring records"
+    }
+  ],
+  "model_comparison": {
+    "Age": {
+      "predictor": "Join Date",
+      "training_observations": 7,
+      "validation": "leave-one-out cross-validation",
+      "linear": {
+        "mae": 5.234857,
+        "mse": 35.244104,
+        "rmse": 5.936675,
+        "r_squared": 0.061434
+      },
+      "polynomial_degree_2": {
+        "mae": 11.951037,
+        "mse": 259.43127,
+        "rmse": 16.10687,
+        "r_squared": -5.908768
+      },
+      "selected_model": "linear"
+    },
+    "Salary": {
+      "predictor": "Age",
+      "training_observations": 8,
+      "validation": "leave-one-out cross-validation",
+      "linear": {
+        "mae": 5031.233282,
+        "mse": 33502214.530472,
+        "rmse": 5788.109755,
+        "r_squared": -0.197176
+      },
+      "polynomial_degree_2": {
+        "mae": 6851.725515,
+        "mse": 82401958.012181,
+        "rmse": 9077.552424,
+        "r_squared": -1.94457
+      },
+      "selected_model": "linear"
+    },
+    "Net worth": {
+      "predictor": "Salary",
+      "training_observations": 7,
+      "validation": "leave-one-out cross-validation",
+      "linear": {
+        "mae": 14555.676211,
+        "mse": 276649251.405431,
+        "rmse": 16632.776419,
+        "r_squared": -0.608808
+      },
+      "polynomial_degree_2": {
+        "mae": 18883.004384,
+        "mse": 406827846.598552,
+        "rmse": 20169.973887,
+        "r_squared": -1.36584
+      },
+      "selected_model": "linear"
+    },
+    "Join Date": {
+      "predictor": "Age",
+      "training_observations": 7,
+      "validation": "leave-one-out cross-validation",
+      "linear": {
+        "mae": 340.723454,
+        "mse": 143981.780133,
+        "rmse": 379.449312,
+        "r_squared": -0.230369
+      },
+      "polynomial_degree_2": {
+        "mae": 458.909871,
+        "mse": 268226.805958,
+        "rmse": 517.906175,
+        "r_squared": -1.292081
+      },
+      "selected_model": "linear"
+    }
+  },
+  "linear_predictions": [
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Age",
+      "predictor": "Join Date",
+      "predictor_value": "2021-07-25",
+      "method": "linear",
+      "raw_prediction": 22.348345,
+      "stored_prediction": 22
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Salary",
+      "predictor": "Age",
+      "predictor_value": 22,
+      "method": "linear",
+      "raw_prediction": 57740.740741,
+      "stored_prediction": 57741
+    },
+    {
+      "id": 5,
+      "name": "David",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 68000.0,
+      "method": "linear",
+      "raw_prediction": 40939.371257,
+      "stored_prediction": 40939
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 57741,
+      "method": "linear",
+      "raw_prediction": 36984.741766,
+      "stored_prediction": 36985
+    },
+    {
+      "id": 4,
+      "name": "Charlie",
+      "field": "Join Date",
+      "predictor": "Age",
+      "predictor_value": 35,
+      "method": "linear",
+      "raw_prediction": 737154.209783,
+      "stored_prediction": "2019-04-05"
+    }
+  ],
+  "polynomial_predictions": [
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Age",
+      "predictor": "Join Date",
+      "predictor_value": "2021-07-25",
+      "method": "polynomial_degree_2",
+      "raw_prediction": 22.834509,
+      "stored_prediction": 23
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Salary",
+      "predictor": "Age",
+      "predictor_value": 23,
+      "method": "polynomial_degree_2",
+      "raw_prediction": 59458.885777,
+      "stored_prediction": 59459
+    },
+    {
+      "id": 5,
+      "name": "David",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 68000.0,
+      "method": "polynomial_degree_2",
+      "raw_prediction": 41401.994624,
+      "stored_prediction": 41402
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 59459,
+      "method": "polynomial_degree_2",
+      "raw_prediction": 38183.023872,
+      "stored_prediction": 38183
+    },
+    {
+      "id": 4,
+      "name": "Charlie",
+      "field": "Join Date",
+      "predictor": "Age",
+      "predictor_value": 35,
+      "method": "polynomial_degree_2",
+      "raw_prediction": 737044.479917,
+      "stored_prediction": "2018-12-16"
+    }
+  ],
+  "selected_predictions": [
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Age",
+      "predictor": "Join Date",
+      "predictor_value": "2021-07-25",
+      "method": "linear",
+      "raw_prediction": 22.348345,
+      "stored_prediction": 22
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Salary",
+      "predictor": "Age",
+      "predictor_value": 22,
+      "method": "linear",
+      "raw_prediction": 57740.740741,
+      "stored_prediction": 57741
+    },
+    {
+      "id": 5,
+      "name": "David",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 68000.0,
+      "method": "linear",
+      "raw_prediction": 40939.371257,
+      "stored_prediction": 40939
+    },
+    {
+      "id": 9,
+      "name": "Heidi",
+      "field": "Net worth",
+      "predictor": "Salary",
+      "predictor_value": 57741,
+      "method": "linear",
+      "raw_prediction": 36984.741766,
+      "stored_prediction": 36985
+    },
+    {
+      "id": 4,
+      "name": "Charlie",
+      "field": "Join Date",
+      "predictor": "Age",
+      "predictor_value": 35,
+      "method": "linear",
+      "raw_prediction": 737154.209783,
+      "stored_prediction": "2019-04-05"
+    }
+  ],
+  "unresolved_values": [
+    {
+      "id": 7,
+      "name": "Unknown",
+      "fields": [
+        "Name"
+      ],
+      "reason": "Categorical identity values are not suitable targets for these regression models."
+    },
+    {
+      "id": 8,
+      "name": "Grace",
+      "fields": [
+        "Country"
+      ],
+      "reason": "Categorical identity values are not suitable targets for these regression models."
+    }
+  ]
+}

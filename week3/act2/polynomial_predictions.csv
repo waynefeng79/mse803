@@ -1,0 +1,10 @@
+ID,Name,Age,Net worth,Country,Salary,Join Date,Predicted Fields
+1,Alice,25,30000,NZL,55000,2020-01-15,
+2,Bob,30,35000,NZL,60000,2020-02-20,
+4,Charlie,35,40000,AUS,72000,2018-12-16,Join Date (polynomial_degree_2)
+5,David,38,41402,NZL,68000,2019-11-01,Net worth (polynomial_degree_2)
+6,Eve,29,22000,AUS,59000,2019-01-13,
+7,Unknown,40,55000,NZL,65000,2018-05-30,
+8,Grace,22,28000,Unknown,64000,2021-07-25,
+9,Heidi,23,38183,AUS,59459,2021-07-25,Age (polynomial_degree_2); Salary (polynomial_degree_2); Net worth (polynomial_degree_2)
+10,Ivan,27,60000,NZL,58000,2019-03-15,
