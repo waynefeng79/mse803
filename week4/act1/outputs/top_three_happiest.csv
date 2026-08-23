@@ -1,0 +1,4 @@
+Country,Happiness_Score,GDP_per_Capita,Social_Support,Healthy_Life_Expectancy,Freedom_to_Make_Choices,Generosity,Perceptions_of_Corruption,Happiness_Normalized,Health_Normalized,Freedom_Normalized,Composite_Happiness_Index
+Norway,6.250000,1.390000,0.820000,81.600000,0.690000,0.010000,0.710000,0.713911,1.000000,0.537313,0.750408
+Canada,7.340000,0.600000,0.460000,49.600000,1.000000,0.070000,0.120000,1.000000,0.205955,1.000000,0.735318
+India,4.450000,1.410000,0.500000,78.400000,1.000000,0.180000,0.160000,0.241470,0.920596,1.000000,0.720688

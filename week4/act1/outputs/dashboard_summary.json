@@ -1,0 +1,54 @@
+{
+  "source_file": "world_happiness_dataset.csv",
+  "cleaning_audit": {
+    "source_rows": 20,
+    "exact_duplicates_removed": 0,
+    "rows_without_country_removed": 0,
+    "numeric_cells_mean_filled": 0,
+    "rows_before_country_aggregation": 20,
+    "countries_after_aggregation": 20
+  },
+  "aggregation": {
+    "method": "Equal-weight mean of min-max normalized Happiness Score, Healthy Life Expectancy, and Freedom to Make Choices.",
+    "weights": {
+      "Happiness_Score": 0.333333,
+      "Healthy_Life_Expectancy": 0.333333,
+      "Freedom_to_Make_Choices": 0.333333
+    }
+  },
+  "dataset_average_freedom": 0.661,
+  "freedom_happiness_pearson_r": 0.082801,
+  "strongest_absolute_feature_correlation": {
+    "features": [
+      "Freedom_to_Make_Choices",
+      "Generosity"
+    ],
+    "pearson_r": -0.563457
+  },
+  "top_three_composite_countries": [
+    {
+      "rank": 1,
+      "country": "Norway",
+      "composite_index": 0.750408,
+      "happiness_score": 6.25,
+      "healthy_life_expectancy": 81.6,
+      "freedom_score": 0.69
+    },
+    {
+      "rank": 2,
+      "country": "Canada",
+      "composite_index": 0.735318,
+      "happiness_score": 7.34,
+      "healthy_life_expectancy": 49.6,
+      "freedom_score": 1.0
+    },
+    {
+      "rank": 3,
+      "country": "India",
+      "composite_index": 0.720688,
+      "happiness_score": 4.45,
+      "healthy_life_expectancy": 78.4,
+      "freedom_score": 1.0
+    }
+  ]
+}
