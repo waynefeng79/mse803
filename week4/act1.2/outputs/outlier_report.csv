@@ -1,0 +1,2 @@
+Country,Feature,Value,Detection_Methods,IQR_Lower_Bound,IQR_Upper_Bound,Modified_Z_Score,Valid_Minimum,Valid_Maximum,Decision,Rationale
+France,Social_Support,0.960000,Modified z-score,0.147500,1.147500,3.757929,0.000000,1.000000,KEEP,"The value is statistically unusual but remains within its valid range. With only 20 diverse countries and no evidence of a data entry error, removing it could bias the analysis."

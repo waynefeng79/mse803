@@ -1,0 +1,38 @@
+{
+  "source_file": "world_happiness_dataset.csv",
+  "cleaning_audit": {
+    "input_rows": 20,
+    "output_rows_before_outlier_decisions": 20,
+    "exact_duplicate_rows_removed": 0,
+    "rows_without_country_removed": 0,
+    "invalid_numeric_values_converted_to_missing": 0,
+    "numeric_values_imputed_with_column_median": 0,
+    "imputed_values_by_column": {
+      "Happiness_Score": 0,
+      "GDP_per_Capita": 0,
+      "Social_Support": 0,
+      "Healthy_Life_Expectancy": 0,
+      "Freedom_to_Make_Choices": 0,
+      "Generosity": 0,
+      "Perceptions_of_Corruption": 0
+    },
+    "duplicate_country_rows_aggregated": 0
+  },
+  "methods": {
+    "iqr": "Values below Q1 - 1.5*IQR or above Q3 + 1.5*IQR.",
+    "modified_z_score": "Median/MAD-based score with absolute threshold 3.5.",
+    "domain_validation": "Checks values against documented valid ranges."
+  },
+  "rows_flagged_by_any_method": 1,
+  "rows_kept": 20,
+  "rows_dropped": 0,
+  "decisions": [
+    {
+      "Country": "France",
+      "Feature": "Social_Support",
+      "Value": 0.96,
+      "Detection_Methods": "Modified z-score",
+      "Decision": "KEEP"
+    }
+  ]
+}
