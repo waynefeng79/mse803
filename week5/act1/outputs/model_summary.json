@@ -1,0 +1,137 @@
+{
+  "dataset": {
+    "zip_file": "iris.zip",
+    "archive_member": "bezdekIris.data",
+    "input_rows": 150,
+    "clean_rows": 150,
+    "rows_removed_for_missing_values": 0,
+    "missing_values_by_column": {
+      "Sepal_Length_cm": 0,
+      "Sepal_Width_cm": 0,
+      "Petal_Length_cm": 0,
+      "Petal_Width_cm": 0,
+      "Species": 0
+    },
+    "rows_removed_for_nonpositive_measurements": 0,
+    "exact_duplicate_measurement_rows_retained": 1,
+    "class_counts": {
+      "setosa": 50,
+      "versicolor": 50,
+      "virginica": 50
+    }
+  },
+  "features": [
+    "Sepal_Length_cm",
+    "Sepal_Width_cm",
+    "Petal_Length_cm",
+    "Petal_Width_cm"
+  ],
+  "target": "Species",
+  "classes": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "split": {
+    "training_rows": 120,
+    "test_rows": 30,
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true,
+    "training_class_counts": {
+      "setosa": 40,
+      "versicolor": 40,
+      "virginica": 40
+    },
+    "test_class_counts": {
+      "setosa": 10,
+      "versicolor": 10,
+      "virginica": 10
+    }
+  },
+  "model": {
+    "estimator": "sklearn.svm.SVC",
+    "pipeline": [
+      "StandardScaler",
+      "SVC"
+    ],
+    "kernel": "rbf",
+    "C": 1.0,
+    "gamma": "scale",
+    "multiclass_training_strategy": "one-versus-one",
+    "decision_function_shape": "one-versus-rest",
+    "support_vectors_by_class": {
+      "setosa": 10,
+      "versicolor": 18,
+      "virginica": 19
+    },
+    "total_support_vectors": 47
+  },
+  "evaluation": {
+    "test_accuracy": 0.966667,
+    "correct_test_predictions": 29,
+    "incorrect_test_predictions": 1,
+    "confusion_matrix": [
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        0,
+        10
+      ]
+    ],
+    "five_fold_cv_scores": [
+      1.0,
+      0.966667,
+      0.9,
+      1.0,
+      0.933333
+    ],
+    "five_fold_cv_mean_accuracy": 0.96,
+    "five_fold_cv_standard_deviation": 0.038873,
+    "classification_report": {
+      "setosa": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "versicolor": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.947368,
+        "support": 10.0
+      },
+      "virginica": {
+        "precision": 0.909091,
+        "recall": 1.0,
+        "f1-score": 0.952381,
+        "support": 10.0
+      },
+      "accuracy": 0.966667,
+      "macro avg": {
+        "precision": 0.969697,
+        "recall": 0.966667,
+        "f1-score": 0.966583,
+        "support": 30.0
+      },
+      "weighted avg": {
+        "precision": 0.969697,
+        "recall": 0.966667,
+        "f1-score": 0.966583,
+        "support": 30.0
+      }
+    }
+  },
+  "notes": {
+    "visualisation_model": "The decision-region chart uses a separate SVC trained on petal length and petal width only; the evaluated model uses all four features."
+  }
+}
